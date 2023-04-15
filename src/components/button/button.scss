@@ -1,20 +1,25 @@
 .button {
 	@extend .transition-active;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid rgba(#000, 0.3);
-	height: 54px;
-	font-weight: 700;
+	display: block;
 	cursor: pointer;
-	font-size: 16px;
-	letter-spacing: -0.5px;
-	padding: 1px 20px 0;
+	line-height: 41px;
+	padding: 0;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+	background-color: #ffffff;
+	height: 40px;
+	width: 91px;
+	transition: filter 0.3s;
+
+	&--submit {
+		background-color: #3366ff;
+		color: white;
+	}
 
 	&:hover {
-		background-color: rgba(#000, 0.3);
-		color: rgba(#000, 0.8);
-		transition: none;
+		filter: brightness(0.8);
 	}
 
 	&:active {

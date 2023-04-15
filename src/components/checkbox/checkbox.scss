@@ -1,0 +1,43 @@
+input[type='checkbox'].checkbox {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	margin: 0;
+	font: inherit;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #cfcfcf;
+	-webkit-transform: translateY(-0.075em);
+	-ms-transform: translateY(-0.075em);
+	transform: translateY(-0.075em);
+
+	display: -ms-grid;
+
+	display: grid;
+	place-content: center;
+
+	&::before {
+		content: '';
+		width: 8px;
+		height: 8px;
+		border-radius: 4px;
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+		-webkit-transition: 120ms -webkit-transform ease-in-out;
+		transition: 120ms -webkit-transform ease-in-out;
+		-o-transition: 120ms transform ease-in-out;
+		transition: 120ms transform ease-in-out;
+		transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+		-webkit-box-shadow: inset 1em 1em #3366ff;
+		box-shadow: inset 1em 1em #3366ff;
+		border-radius: 0;
+	}
+
+	&:checked::before {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}

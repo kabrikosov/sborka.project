@@ -1,0 +1,8 @@
+{% macro checkbox(props) %}
+<input type="checkbox" 
+    class="checkbox{% if props.className %} {{ props.className }}{% endif %}" 
+    id="{% if props.id %} {{ props.id }}{% endif %}"
+    name="{% if props.name %} {{ props.name }}{% endif %}">
+	{{ props.children }}
+</input>
+{% endmacro %}

@@ -1,0 +1,7 @@
+{% macro radio(props) %}
+<input type="radio" class="radio{% if props.className %} {{ props.className }}{% endif %}"
+	id="{% if props.id %} {{ props.id }}{% endif %}"
+    name="{% if props.name %} {{ props.name }}{% endif %}">
+	{{ props.children }}
+</input>
+{% endmacro %}

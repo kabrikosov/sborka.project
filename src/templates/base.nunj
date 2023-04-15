@@ -10,15 +10,14 @@
 
 		{% block stylesheets %}
 			<link rel="stylesheet" href="assets/css/styles.css?hash" />
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 		{% endblock stylesheets %}
 	</head>
 	<body>
-
-		<div class="wrapper">
-			{% block content %}
-			{% endblock content %}
-		</div>
-
+		{% block content %}
+		{% endblock content %}
 		{% block scripts %}
 			<script src="assets/js/bundle.js?hash"></script>
 		{% endblock scripts %}
